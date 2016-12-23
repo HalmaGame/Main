@@ -1,4 +1,4 @@
-#include "déplacementjoueur1.h"
+#include "dÃ©placementjoueur1.h"
 void gotoligcol( int lig, int col )
 {
     // ressources
@@ -60,7 +60,7 @@ int main()
                         gotoligcol(4,55);
                         printf("C'est le tour %d de joueur %d", tour, joueur);
                         afficher(mat);
-                        deplacementjoueur1(mat);
+                        deplacementjoueur1(mat, &joueur);
                     }
                 }
             }
@@ -85,11 +85,20 @@ int main()
                 {0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2},
                 {0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2},
                 };
-                while(1)
-                {
-                    afficher(mat);
-                    deplacementjoueur1(mat);
-                }
+                 while(findugame != 1)
+                    {
+                        int tour, joueur;
+                        for (tour=0; tour<200; tour++)
+                        {
+                            for (joueur=1; joueur<=2; joueur++)
+                            {
+                                gotoligcol(4,55);
+                                printf("C'est le tour %d de joueur %d", tour, joueur);
+                                afficher(mat);
+                                deplacementjoueur1(mat, &joueur);
+                            }
+                        }
+                    }
     }
         int idep , jdep;
         int iar , jar;
