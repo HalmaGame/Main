@@ -1,5 +1,5 @@
-#include "déplacementjoueur1.h"
-void deplacementjoueur1(int tab[][16])
+#include "dÃ©placementjoueur1.h"
+void deplacementjoueur1(int tab[][16], int* joueur)
 {//deplacement joueur
  int x;
  int y;
@@ -26,7 +26,7 @@ gotoligcol(11,55);
  gotoligcol(13,55);
  printf ("                                  ");
     tab[y][x] = 0;
-    tab[y1][x1] = 1;
+    tab[y1][x1] = *joueur;
 }
 void afficher(int tab[][16])
 {
